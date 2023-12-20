@@ -1,6 +1,6 @@
 import Drawer from 'devextreme-react/drawer';
 import ScrollView from 'devextreme-react/scroll-view';
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { Header, SideNavigationMenu, Footer } from '../../components';
 import './side-nav-outer-toolbar.scss';
@@ -17,9 +17,20 @@ export default function SideNavOuterToolbar({ title, children }: React.PropsWith
   const { isXSmall, isLarge } = useScreenSize();
   const [patchCssClass, onMenuReady] = useMenuPatch();
   const [menuStatus, setMenuStatus] = useState(
-    isLarge ? MenuStatus.Opened : MenuStatus.Closed
+    isLarge ? MenuStatus.Closed : MenuStatus.Closed
   );
 
+  // สิ่งที่เพิ่มเข้ามา
+  useEffect(() => {
+    const handleResize = () => {
+      setMenuStatus(MenuStatus.Closed);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  
   const toggleMenu = useCallback(({ event }: ButtonTypes.ClickEvent) => {
     setMenuStatus(
       prevMenuStatus => prevMenuStatus === MenuStatus.Closed
@@ -74,8 +85,8 @@ export default function SideNavOuterToolbar({ title, children }: React.PropsWith
         closeOnOutsideClick={onOutsideClick}
         openedStateMode={isLarge ? 'shrink' : 'overlap'}
         revealMode={isXSmall ? 'slide' : 'expand'}
-        minSize={isXSmall ? 0 : 60}
-        maxSize={250}
+        minSize={0}
+        // maxSize={250}
         shading={isLarge ? false : true}
         opened={menuStatus === MenuStatus.Closed ? false : true}
         template={'menu'}
