@@ -1,5 +1,5 @@
 const appInfo = {
-    title: 'WebSysManager'
+    title: 'Websysmanager'
 };
 export default appInfo;
 
