@@ -1,0 +1,76 @@
+.headerContainer {
+  display: grid;
+  grid-template-columns: 360px auto;
+  margin-bottom: 5px;
+  .spreadingNo {
+    .textSpreadingNo {
+      padding-left: 65px;
+      margin-bottom: 2px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  .boxRFID {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    .textBoxRfid {
+      padding-left: 95px;
+      margin-bottom: 2px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}
+.mainContainer {
+  display: grid;
+  grid-template-columns: 250px auto;
+  gap: 4px;
+  height: calc(100vh - 150px);
+  .table {
+    border: 2px solid #f5c242;
+    border-radius: 4px;
+  }
+}
+.dflex {
+  display: flex;
+}
+.information {
+  border: 2px solid #f5c242;
+  border-radius: 4px;
+}
+.textInformation {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contentInformation {
+  // background-color: rgb(210, 199, 199);
+  height: calc(100vh - 210px);
+  overflow-y: auto;
+  padding-left: 10px;
+}
+
+.contentInformation::-webkit-scrollbar {
+  width: 14px; /* กว้างของ scrollbar */
+}
+
+.contentInformation::-webkit-scrollbar-thumb {
+  background-color: #f5c242; /* สีของ thumb (บางส่วนที่สามารถลาก) */
+  border-radius: 10px; /* ความโค้งของ thumb */
+  border: 3px solid #bdbdbd;
+}
+
+.contentInformation::-webkit-scrollbar-track {
+  background-color: #bdbdbd; /* สีของ track (ส่วนที่ไม่สามารถลาก) */
+  border-radius: 6px; /* ความโค้งของ track */
+}
+
+.textbold {
+  font-weight: bold;
+}
