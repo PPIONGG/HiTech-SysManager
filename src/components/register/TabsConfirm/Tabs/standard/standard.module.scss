@@ -4,30 +4,36 @@
   justify-content: space-between;
   height: calc(100vh - 156px);
 }
+
 .imgSize {
   display: grid;
   grid-template-columns: 100px auto;
   height: 100px;
+
   .img {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .groupsize {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 50px;
+    padding-left: 20px;
+
     .size {
       font-weight: bold;
       font-size: 24px;
     }
+
     .marker {
       font-weight: bold;
       font-size: 24px;
     }
   }
 }
+
 .cardconfrim {
   margin-left: 5px;
   margin-right: 5px;
@@ -39,6 +45,7 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
+
   .textconfirm {
     font-weight: bold;
     font-size: 22px;
@@ -54,12 +61,14 @@
   margin-left: 5px;
   margin-right: 5px;
 }
+
 .incrementButton {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(161, 206, 98);
 }
+
 .decrementButton {
   display: flex;
   align-items: center;
@@ -67,15 +76,24 @@
   font-weight: bold;
   background-color: rgb(230, 51, 35);
 }
-.bundleRFID {
+
+.inputBundleRFID {
+  margin-top: 5px;
+}
+
+.groupBundleRFID {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 6px;
+  background-color: #f5c242;
+  border-radius: 4px;
+}
+
+.textBundleRFID {
   padding-left: 10px;
   font-weight: bold;
-  background-color: #f5c242;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 6px;
-  height: 35px;
-  border-radius: 4px;
+  font-size: 16px;
 }

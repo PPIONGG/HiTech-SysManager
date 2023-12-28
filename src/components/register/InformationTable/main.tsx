@@ -1,3 +1,4 @@
+import Datagrid from './datagrid';
 import styles from './styles.module.scss'
 export default function MainInformationTable() {
   return (
@@ -66,7 +67,9 @@ export default function MainInformationTable() {
         </div>
         </div>
       </div>
-      <div className={styles.table}>table</div>
+      <div className={styles.table}>
+        <Datagrid/>
+      </div>
     </div>
   );
 }

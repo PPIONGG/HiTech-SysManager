@@ -31,7 +31,7 @@ function Confirm() {
         onChange={handleChange}
         centered
         style={{
-          width: "400px",
+          width: "300px",
           borderTopLeftRadius: "4px",
           borderTopRightRadius: "4px",
         }}
@@ -42,7 +42,7 @@ function Confirm() {
         }}
         sx={{
           "& .MuiTab-root": {
-            fontSize: "10px",
+            fontSize: "8px",
             fontWeight: "bold",
             minHeight: '40px'
           },
@@ -53,10 +53,11 @@ function Confirm() {
           sx={{
             "&.Mui-selected": { color: "black", backgroundColor: "#f5c242"},
             color: "#ffffff",
-            width: "100px",
+            width: "50px",
             backgroundColor: "black",
             clipPath: "polygon(-10% 80%, 25% -10%, 700% 100%, 0 100%)",
             borderTopRightRadius : '6px',
+            minWidth: "75px",   // กำหนดความกว้างขั้นต่ำเป็น 30px
 
           }}
         />
@@ -65,11 +66,13 @@ function Confirm() {
           sx={{
             "&.Mui-selected": { color: "black", backgroundColor: "#f5c242",borderLeft : '1px solid #ffffff' },
             color: "#ffffff",
-            width: "100px",
+            width: "50px",
             backgroundColor: "black",
             clipPath: "polygon(-10% 80%, 25% -10%, 700% 100%, 0 100%)",
             borderLeft : '1px solid #ffffff',
             borderTopRightRadius : '6px',
+            minWidth: "75px",   // กำหนดความกว้างขั้นต่ำเป็น 30px
+
           }}
         />
         <Tab
@@ -77,11 +80,12 @@ function Confirm() {
           sx={{
             "&.Mui-selected": { color: "black", backgroundColor: "#f5c242",borderLeft : '1px solid #ffffff'},
             color: "#ffffff",
-            width: "100px",
+            width: "50px",
             backgroundColor: "black",
             clipPath: "polygon(-10% 80%, 25% -10%, 700% 100%, 0 100%)",
             borderLeft : '1px solid #ffffff',
             borderTopRightRadius : '6px',
+            minWidth: "75px",   // กำหนดความกว้างขั้นต่ำเป็น 30px
           }}
         />
         <Tab
@@ -89,12 +93,12 @@ function Confirm() {
           sx={{
             "&.Mui-selected": { color: "black", backgroundColor: "#f5c242",borderLeft : '1px solid #ffffff' },
             color: "#ffffff",
-            width: "100px",
+            width: "50px",
             backgroundColor: "black",
             clipPath: "polygon(-10% 80%, 25% -10%, 700% 100%, 0 100%)",
             borderLeft : '1px solid #ffffff',
             borderTopRightRadius : '6px',
-
+            minWidth: "75px",   // กำหนดความกว้างขั้นต่ำเป็น 30px
           }}
         />
         {/* <Tab

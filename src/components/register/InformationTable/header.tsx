@@ -17,6 +17,9 @@ const StyledDiv = styled("div")(({ theme }) => ({
     "&:hover fieldset": {
       borderColor: theme.palette.warning.main,
     },
+    "& fieldset": {
+      borderColor: theme.palette.warning.main, // สีเริ่มต้นที่จะเปลี่ยน
+    },
   },
 }));
 
@@ -39,7 +42,7 @@ export default function HeaderInformationTable() {
                 InputProps={{
                   style: {
                     borderRadius: "20px",
-                    width: "250px",
+                    width: "200px",
                     height: "30px",
                     color: "white",
                     fontWeight: "bold",
