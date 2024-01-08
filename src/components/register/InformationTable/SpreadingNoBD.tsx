@@ -32,18 +32,24 @@ const StyledDiv = styled("div")(({ theme }) => ({
 
 const SpreadingNoBD: React.FC<BackdropProps> = ({ show, onClose }) => {
   const [inputValue, setInputValue] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
+    setLoading(true);
   };
 
   useEffect(() => {
-    if (inputValue === "123456") {
-      const timer = setTimeout(() => {
-        onClose();
-      }, 2000); // 3 seconds
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => {
+      setLoading(false);
+      if (inputValue === "123456") {
+        const closeTimer = setTimeout(() => {
+          onClose();
+        }, 2500);
+        return () => clearTimeout(closeTimer);
+      }
+    }, 500);
+    return () => clearTimeout(timer);
   }, [inputValue, onClose]);
 
   return show ? (
@@ -76,7 +82,8 @@ const SpreadingNoBD: React.FC<BackdropProps> = ({ show, onClose }) => {
           </ThemeProvider>
         </div>
         <div className={styles.grouptext}>
-        {inputValue && inputValue !== "123456" && (
+        {loading && <span className={styles.loader}></span>}
+        {!loading && inputValue && inputValue !== "123456" && (
             <CancelRoundedIcon
               style={{
                 color: "red",
@@ -86,7 +93,7 @@ const SpreadingNoBD: React.FC<BackdropProps> = ({ show, onClose }) => {
               }}
             />
           )}
-          {inputValue === "123456" && (
+          {!loading && inputValue === "123456" && (
             <TaskAltRoundedIcon style={{ color: "#05f234", fontSize: "32px" }} />
           )}
           <div className={styles.LeftChevron}></div>
