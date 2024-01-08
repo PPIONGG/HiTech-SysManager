@@ -49,66 +49,69 @@ const StyledDiv = styled("div")(({ theme }) => ({
 
 export default function Standard() {
   return (
-    <div className={styles.container}>
-      <div>
-        <div>
-          <div className={styles.imgSize}>
-            <div className={styles.img}>
-              <img
-                width={70}
-                src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSyWfvY2rfy4gGRRzoah5rz2PJcr3UA421_ANIDMJEvGHKENbGAVGwKJQxXBtMQpZgFslJR0Y7CXwONP6qXDVk_xLk4WpqGeWrOR376_HQMyo3tSNV1CgQWtg223tuzLxROjKkTdhxR&usqp=CAc"
-                alt=""
-              />
-            </div>
-            <div className={styles.groupsize}>
-              <div className={styles.size}>M</div>
-              <div className={styles.marker}>กระเป๋าซ้าย X1</div>
-            </div>
-          </div>
-          {/* <div className={styles.groupcount}>
-            <Stack direction="row" spacing={0.6}>
-              <IncrementButton variant="contained">เพิ่ม (+)</IncrementButton>
-              <DecrementButton variant="contained">ลด (-)</DecrementButton>
-            </Stack>
-          </div> */}
-        </div>
+    <>
 
-        <div className={styles.groupBundleRFID}>
-          <div className={styles.textBundleRFID}>Bundle RFID</div>
-          <ThemeProvider theme={customTheme}>
-            <StyledDiv>
-              <TextField
-                label=""
-                variant="outlined"
-                color="warning"
-                style={{
-                  backgroundColor: "#f5c242",
-                  borderRadius: "4px",
-                }}
-                InputProps={{
-                  style: {
-                    width: "170px",
-                    height: "35px",
-                    color: "white",
-                    fontWeight: "bold",
-                  },
-                }}
-              />
-            </StyledDiv>
-          </ThemeProvider>
-        </div>
-      </div>
-      <div className={styles.cardconfrim}>
-        <div className={styles.textconfirm}>CONFIRM</div>
-        <CancelRoundedIcon
-          style={{
-            color: "red",
-            fontSize: "32px",
-            backgroundColor: "white",
-            borderRadius: "100px",
-          }}
-        />
-      </div>
-    </div>
+    </>
+    // <div className={styles.container}>
+    //   <div>
+    //     <div>
+    //       <div className={styles.imgSize}>
+    //         <div className={styles.img}>
+    //           <img
+    //             width={70}
+    //             src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSyWfvY2rfy4gGRRzoah5rz2PJcr3UA421_ANIDMJEvGHKENbGAVGwKJQxXBtMQpZgFslJR0Y7CXwONP6qXDVk_xLk4WpqGeWrOR376_HQMyo3tSNV1CgQWtg223tuzLxROjKkTdhxR&usqp=CAc"
+    //             alt=""
+    //           />
+    //         </div>
+    //         <div className={styles.groupsize}>
+    //           <div className={styles.size}>M</div>
+    //           <div className={styles.marker}>กระเป๋าซ้าย X1</div>
+    //         </div>
+    //       </div>
+    //       {/* <div className={styles.groupcount}>
+    //         <Stack direction="row" spacing={0.6}>
+    //           <IncrementButton variant="contained">เพิ่ม (+)</IncrementButton>
+    //           <DecrementButton variant="contained">ลด (-)</DecrementButton>
+    //         </Stack>
+    //       </div> */}
+    //     </div>
+
+    //     <div className={styles.groupBundleRFID}>
+    //       <div className={styles.textBundleRFID}>Bundle RFID</div>
+    //       <ThemeProvider theme={customTheme}>
+    //         <StyledDiv>
+    //           <TextField
+    //             label=""
+    //             variant="outlined"
+    //             color="warning"
+    //             style={{
+    //               backgroundColor: "#f5c242",
+    //               borderRadius: "4px",
+    //             }}
+    //             InputProps={{
+    //               style: {
+    //                 width: "170px",
+    //                 height: "35px",
+    //                 color: "white",
+    //                 fontWeight: "bold",
+    //               },
+    //             }}
+    //           />
+    //         </StyledDiv>
+    //       </ThemeProvider>
+    //     </div>
+    //   </div>
+    //   <div className={styles.cardconfrim}>
+    //     <div className={styles.textconfirm}>CONFIRM</div>
+    //     <CancelRoundedIcon
+    //       style={{
+    //         color: "red",
+    //         fontSize: "32px",
+    //         backgroundColor: "white",
+    //         borderRadius: "100px",
+    //       }}
+    //     />
+    //   </div>
+    // </div>
   );
 }

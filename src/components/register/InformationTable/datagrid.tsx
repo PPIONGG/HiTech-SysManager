@@ -51,7 +51,7 @@ export default function Datagrid() {
 
   return (
     <div>
-      <TableContainer component={Table}>
+      <TableContainer component={Paper}>
         <Table sx={{ backgroundColor: "rgb(242,242,242)" }}>
           <TableHead>
             <TableRow>
