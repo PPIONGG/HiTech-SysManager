@@ -1,6 +1,6 @@
 .headerContainer {
   display: grid;
-  grid-template-columns: 360px auto;
+  grid-template-columns: 230px auto;
   margin-bottom: 5px;
   .spreadingNo {
     .textSpreadingNo {
@@ -34,6 +34,7 @@
 }
 .dflex {
   display: flex;
+  align-items: center;
 }
 .information {
   border: 2px solid #f5c242;

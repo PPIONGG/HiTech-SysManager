@@ -6,6 +6,8 @@ import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
 import TaskAltRoundedIcon from "@mui/icons-material/TaskAltRounded";
 import SpreadingNoBD from "./SpreadingNoBD";
 import { useState } from "react";
+import BoxRfidBD from "./BoxRfidBD";
+import BoxConfirmBD from "./BoxConfirmBD";
 
 
 const customTheme = createTheme({
@@ -27,15 +29,25 @@ const StyledDiv = styled("div")(({ theme }) => ({
 }));
 
 export default function HeaderInformationTable() {
-  const [showBackdrop, setShowBackdrop] = useState(true);
+  const [showBDSpreadingNoBD, setShowBDSpreadingNoBD] = useState(true);
+  const [showBDBoxRfidBD, setShowBDBoxRfidBD] = useState(false);
+  const [showBDBoxConfirmBD, setShowBDBoxConfirmBD] = useState(false);
 
-  const closeBackdrop = () => {
-    setShowBackdrop(false);
+  const closeBackdropSpreadingNo = () => {
+    setShowBDSpreadingNoBD(false);
+    setShowBDBoxRfidBD(true)
   };
+
+  const closeBackdropBoxRfid = () => {
+    setShowBDBoxRfidBD(false)
+    setShowBDBoxConfirmBD(true)
+  };
+
   return (
     <div className={styles.headerContainer}>
-              <SpreadingNoBD show={showBackdrop} onClose={closeBackdrop} />
-
+      <SpreadingNoBD show={showBDSpreadingNoBD} onClose={closeBackdropSpreadingNo} />
+      <BoxRfidBD show={showBDBoxRfidBD} onClose={closeBackdropBoxRfid} />
+      <BoxConfirmBD show={showBDBoxConfirmBD}/>
       <div className={styles.spreadingNo}>
         <div className={styles.textSpreadingNo}>SPREADING No</div>
         <div className={styles.dflex}>
@@ -61,9 +73,7 @@ export default function HeaderInformationTable() {
               />
             </StyledDiv>
           </ThemeProvider>
-          <div>
-            {/* <CancelRoundedIcon style={{ color: "red", fontSize: "32px" }} /> */}
-          </div>
+          <TaskAltRoundedIcon style={{ color: "green", fontSize: "30px" }} />
         </div>
       </div>
       <div className={styles.boxRFID}>
@@ -91,6 +101,7 @@ export default function HeaderInformationTable() {
               />
             </StyledDiv>
           </ThemeProvider>
+          <TaskAltRoundedIcon style={{ color: "green", fontSize: "30px" }} />
           {/* <TaskAltRoundedIcon style={{ color: "green", fontSize: "32px" }} /> */}
           {/* <CancelRoundedIcon style={{ color: 'red',fontSize:"32px"}}/> */}
         </div>
